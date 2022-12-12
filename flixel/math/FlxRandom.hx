@@ -162,7 +162,7 @@ class FlxRandom
 	 * @param	Mean		The Mean around which the normal distribution is centered
 	 * @param	StdDev		Size of the standard deviation
 	 */
-	public function floatNormal(Mean:Float = 0, StdDev:Float = 1):Float
+	public static function floatNormal(Mean:Float = 0, StdDev:Float = 1):Float
 	{
 		if (_hasFloatNormalSpare)
 		{
