@@ -146,11 +146,11 @@ class FlxRandom
 	}
 
 	// helper variables for floatNormal -- it produces TWO random values with each call so we have to store some state outside the function
-	var _hasFloatNormalSpare:Bool = false;
-	var _floatNormalRand1:Float = 0;
-	var _floatNormalRand2:Float = 0;
-	var _twoPI:Float = Math.PI * 2;
-	var _floatNormalRho:Float = 0;
+	static var _hasFloatNormalSpare:Bool = false;
+	static var _floatNormalRand1:Float = 0;
+	static var _floatNormalRand2:Float = 0;
+	static var _twoPI:Float = Math.PI * 2;
+	static var _floatNormalRho:Float = 0;
 
 	/**
 	 * Returns a pseudorandom float value in a statistical normal distribution centered on Mean with a standard deviation size of StdDev.
