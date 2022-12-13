@@ -407,7 +407,7 @@ class FlxRandom
 	 * The actual internal seed. Stored as a Float value to prevent inaccuracies due to
 	 * integer overflow in the generate() equation.
 	 */
-	var internalSeed:Float = 1;
+	static var internalSeed:Float = 1;
 
 	/**
 	 * Internal function to update the current seed whenever the initial seed is reset,
