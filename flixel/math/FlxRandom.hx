@@ -398,7 +398,7 @@ class FlxRandom
 	 *
 	 * @return  A new pseudorandom number.
 	 */
-	inline function generate():Float
+	inline static function generate():Float
 	{
 		return internalSeed = (internalSeed * MULTIPLIER) % MODULUS;
 	}
