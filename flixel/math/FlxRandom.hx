@@ -3,7 +3,7 @@ package flixel.math;
 import flixel.util.FlxColor;
 
 /**
- * A class containing a set of functions for random generation. Should be accessed via `FlxG.random`.
+ * A class containing a set of functions for random generation.
  */
 class FlxRandom
 {
@@ -146,11 +146,11 @@ class FlxRandom
 	}
 
 	// helper variables for floatNormal -- it produces TWO random values with each call so we have to store some state outside the function
-	static var _hasFloatNormalSpare:Bool = false;
-	static var _floatNormalRand1:Float = 0;
-	static var _floatNormalRand2:Float = 0;
-	static var _twoPI:Float = Math.PI * 2;
-	static var _floatNormalRho:Float = 0;
+	var _hasFloatNormalSpare:Bool = false;
+	var _floatNormalRand1:Float = 0;
+	var _floatNormalRand2:Float = 0;
+	var _twoPI:Float = Math.PI * 2;
+	var _floatNormalRho:Float = 0;
 
 	/**
 	 * Returns a pseudorandom float value in a statistical normal distribution centered on Mean with a standard deviation size of StdDev.
@@ -162,7 +162,7 @@ class FlxRandom
 	 * @param	Mean		The Mean around which the normal distribution is centered
 	 * @param	StdDev		Size of the standard deviation
 	 */
-	public static function floatNormal(Mean:Float = 0, StdDev:Float = 1):Float
+	public function floatNormal(Mean:Float = 0, StdDev:Float = 1):Float
 	{
 		if (_hasFloatNormalSpare)
 		{
@@ -398,7 +398,7 @@ class FlxRandom
 	 *
 	 * @return  A new pseudorandom number.
 	 */
-	inline static function generate():Float
+	inline function generate():Float
 	{
 		return internalSeed = (internalSeed * MULTIPLIER) % MODULUS;
 	}
@@ -407,7 +407,7 @@ class FlxRandom
 	 * The actual internal seed. Stored as a Float value to prevent inaccuracies due to
 	 * integer overflow in the generate() equation.
 	 */
-	static var internalSeed:Float = 1;
+	var internalSeed:Float = 1;
 
 	/**
 	 * Internal function to update the current seed whenever the initial seed is reset,
